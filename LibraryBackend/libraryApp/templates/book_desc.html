@@ -2,11 +2,11 @@
 {% block content %}
 
     <!--details of the book-->
-    <div class="row container ">
-        <div class=" ">
+    <div class="row container  ">
+        <div class=" " style="position: center">
             <div class="card-panel ">
                 {% for book in info %}
-                    <h4 style="text-transform: capitalize; font-family: 'Times New Roman'"><b><span class="card-title">{{ book.name }}</span></b></h4>
+                    <h4 style="text-transform: capitalize; font-family: 'Times New Roman'; position: center"><b><span class="card-title">{{ book.name }}</span></b></h4>
                     <h6 style="text-transform: capitalize"><b>{{ book.author }}</b></h6>
                     <p>ISBN NO:<b>{{ book.isbn_no}}</b></p>
                     <p>{{ book.description}}</p>

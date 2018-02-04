@@ -13,11 +13,17 @@
         <ul class="container">
             {% for author in info %}
                 <li class="card panel">
-                    <i class="material-icons left medium  amber-text text-darken-4">person</i>
-                    <a href="authors/{{ author.id }}"><h6 style="text-transform: capitalize; color: black"> <b><span class="title">{{ author.name }}</span></b></h6></a>
-                    <p style="text-transform: capitalize;">{{ author.pob }} <br>
-                        {{ author.age }}
-                    </p>
+
+
+                            <i class="material-icons left medium  amber-text text-darken-4" style="padding-top: 1%">person</i>
+
+
+                            <a href="authors/{{ author.id }}"><h6 style="padding-top: 1%; text-transform: capitalize; color: black"> <b><span class="title">{{ author.name }}</span></b></h6></a>
+                        <p style="text-transform: capitalize; padding-bottom: 1%">{{ author.pob }} <br>
+                            {{ author.age }}
+                        </p>
+
+
                 </li>
             {% endfor %}
         </ul>

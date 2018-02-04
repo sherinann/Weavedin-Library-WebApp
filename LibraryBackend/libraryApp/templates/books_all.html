@@ -10,13 +10,21 @@
         <!-- displaying the list of books-->
         <ul class="container ">
             {% for book in info %}
-                <li class="card panel " style="margin-top: 1%">
-                    <i class="material-icons medium left amber-text text-darken-4" >book</i>
-
-                    <a href="books/{{ book.isbn_no }}"> <h6 style="color: black; text-transform: capitalize" style="margin-top: 5%"><b> <span class="title">{{ book.name }}</span> </b></h6></a>
-                    <p style="text-transform: capitalize"> {{ book.author }} </p>
-                    <p  align=right > isbn no: {{ book.isbn_no }}
-                    </p>
+                <li class="card panel ;" >
+                    <div id="outer">
+                        <div id="middle" >
+                        <div id="area1" style="width: 25%; padding-top: 1% ;">
+                            <i class="material-icons medium left amber-text text-darken-4"  >book</i>
+                        </div>
+                        <div id="area1" style="width: 40%;">
+                            <a href="books/{{ book.isbn_no }}"> <h6 style="color: black; text-transform: capitalize ;padding-top: 1%"><b> <span class="title">{{ book.name }}</span> </b></h6></a>
+                            <p style="text-transform: capitalize ;"> {{ book.author }} </p>
+                        </div>
+                        <div id="area1" style="width: auto; padding-bottom: 1% ; margin-right: 1%;">
+                             <p align="right" style="position: center" > isbn no: {{ book.isbn_no }}</p>
+                        </div>
+                        </div>
+                    </div>
                 </li>
             {% endfor %}
         </ul>
