@@ -1,0 +1,48 @@
+
+{% extends "index.html" %}
+{% block content %}
+    <div id="Books" style="margin-top: 0;">
+        <div class="fixed-action-btn">
+            <!-- Modal Trigger -->
+            <a data-target="modal1"  class= "btn-floating btn-large waves-effect waves-light cyan btn modal-trigger "><i class="material-icons">add</i></a>
+
+        </div>
+        <!-- displaying the list of books-->
+        <ul class="container ">
+            {% for book in info %}
+                <li class="card panel " style="margin-top: 1%">
+                    <i class="material-icons medium left amber-text text-darken-4" >book</i>
+
+                    <a href="books/{{ book.isbn_no }}"> <h6 style="color: black; text-transform: capitalize" style="margin-top: 5%"><b> <span class="title">{{ book.name }}</span> </b></h6></a>
+                    <p style="text-transform: capitalize"> {{ book.author }} </p>
+                    <p  align=right > isbn no: {{ book.isbn_no }}
+                    </p>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+            <!-- Modal Structure  to add a new book into the database-->
+    <div id="modal1" class="modal">
+        <div class="modal-content ">
+            <h4 style="color:#ff6f00 ">Add new Book</h4>
+            <form class="col s12" method="post"  action="{% url 'addBook' %}">
+                {% csrf_token %}
+                <input placeholder="name of book" id="bname" type="text" name="bname" class="validate " >
+                <input placeholder="Author" id="author" type="text" name="author" class="validate">
+                <input placeholder="ISBN NO" id="isbnNo" type="text" name="isbnNo" class="validate">
+                <textarea id="textarea1" name="textarea1" class="materialize-textarea" placeholder="Description"></textarea>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+                    <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat">
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+
+
+
+
+
+
+

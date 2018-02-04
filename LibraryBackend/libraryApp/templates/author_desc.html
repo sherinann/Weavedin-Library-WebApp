@@ -1,0 +1,32 @@
+
+<!-- this file makes up the details of authors page--->
+{% extends "index.html" %}
+
+{% block content %}
+    <!-- display authors details as a collection-->
+    <ul class="collection ">
+
+        <li class="collection-item avatar z-depth-5">
+            <i class="material-icons medium left amber-text text-darken-4">person</i>
+            {% for author in info %}
+                <h6 style="text-transform: capitalize"><b>{{ author.name }}</b></h6>
+                <p>{{ author.age }}</p>
+                <p>{{ author.pob }}</p>
+                <p>{{ author.description}}</p>
+            {% endfor %}
+        </li>
+
+        <!-- displaying books written bu the author-->
+        {% for book in info_book %}
+            <li class="collection-item avatar z-depth-5">
+                <i class="material-icons medium left amber-text text-darken-4">book</i>
+                <h6 style="text-transform: capitalize">  <b>{{ book }}</b></h6>
+            </li>
+        {% endfor %}
+
+    </ul>
+
+{% endblock %}
+
+
+

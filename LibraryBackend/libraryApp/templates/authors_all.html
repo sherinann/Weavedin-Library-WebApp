@@ -1,0 +1,71 @@
+
+{% extends "index.html" %}
+{% block content1 %}
+
+    <div id="Authors">
+
+        <div class="fixed-action-btn">
+            <!-- Modal Trigger -->
+            <a data-target="modal2"  class= "btn-floating btn-large waves-effect waves-light cyan btn modal-trigger "><i class="material-icons">add</i></a>
+        </div>
+
+    <!-- displaying all the authors -->
+        <ul class="container">
+            {% for author in info %}
+                <li class="card panel">
+                    <i class="material-icons left medium  amber-text text-darken-4">person</i>
+                    <a href="authors/{{ author.id }}"><h6 style="text-transform: capitalize; color: black"> <b><span class="title">{{ author.name }}</span></b></h6></a>
+                    <p style="text-transform: capitalize;">{{ author.pob }} <br>
+                        {{ author.age }}
+                    </p>
+                </li>
+            {% endfor %}
+        </ul>
+
+    </div>
+
+    <!-- Modal Structure to add a new author to the database -->
+    <div id="modal2" class="modal">
+        <form class="col s12"  method="post" action="{% url 'addAuthor' %}">
+            {% csrf_token %}
+            <div class="modal-content">
+
+                <h4 style="color:#ff6f00 ">Add new Author</h4>
+                <input placeholder="name " id="aname" name="aname" type="text" class="validate " >
+                <input placeholder="Age" id="age"  name="age" type="text" class="validate">
+                <p>
+                    <input name="gender" type="radio" id="test1"  value="M"/>
+                    <label for="test1">Male</label>
+                </p>
+                <p>
+                    <input name="gender" type="radio" id="test2"  value="F"/>
+                    <label for="test2">Female</label>
+                </p>
+                <p>
+                    <input placeholder="Place of birth" id="pob"  name="pob"  type="text" class="validate">
+                </p>
+            </div>
+
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+                <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat">
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
