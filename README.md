@@ -5,18 +5,16 @@ A web application for a library system
 * django
 * Materialize css
 
-to install django:
-` pip install django`
 
 ### to run:
 1. clone the repository
 `git clone https://github.com/sherinann/Weavedin-Library-WebApp`
 
 2. install dependencies
-   * django
+ * django
 ` pip install django `
   * sql client
-  pip install mysqlclient`
+  `pip install mysqlclient`
   
 3. add database credentials to `settings.py`
 
