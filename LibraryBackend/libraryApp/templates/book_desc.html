@@ -2,16 +2,22 @@
 {% block content %}
 
     <!--details of the book-->
-    <div class="row container  ">
+    <div class="container ">
         <div class=" " style="position: center">
-            <div class="card-panel ">
-                {% for book in info %}
-                    <h4 style="text-transform: capitalize; font-family: 'Times New Roman'; position: center"><b><span class="card-title">{{ book.name }}</span></b></h4>
-                    <h6 style="text-transform: capitalize"><b>{{ book.author }}</b></h6>
-                    <p>ISBN NO:<b>{{ book.isbn_no}}</b></p>
-                    <p>{{ book.description}}</p>
-                {% endfor %}
-            </div>
+            {% for book in info %}
+                <div class="card-panel ">
+                        <h4 style="text-transform: capitalize; font-family: 'Times New Roman';"><b><span >{{ book.name }}</span></b></h4>
+                    {% for item  in info_author %}
+                    <a href="/authors/{{ item.id }}"> <h6 style="text-transform: capitalize ;color: black"><b>{{ book.author }}</b></h6></a>
+                        {% endfor %}
+                        <p align="right">ISBN NO:<b>{{ book.isbn_no}}</b></p>
+
+                </div>
+                <div class="card-panel ">
+                  <h6><b>About:</b> </h6>
+                        <p>{{ book.description}}</p>
+                </div>
+            {% endfor %}
         </div>
     </div>
 

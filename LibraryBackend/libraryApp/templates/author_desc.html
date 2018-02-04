@@ -9,7 +9,7 @@
         <li class="collection-item avatar z-depth-5">
             <i class="material-icons medium left amber-text text-darken-4">person</i>
             {% for author in info %}
-                <h6 style="text-transform: capitalize"><b>{{ author.name }}</b></h6>
+                <a href=""><h6 style="color: black; text-transform: capitalize"><b>{{ author.name }}</b></h6></a>
                 <p>{{ author.age }}</p>
                 <p>{{ author.pob }}</p>
                 <p>{{ author.description}}</p>
@@ -20,7 +20,7 @@
         {% for book in info_book %}
             <li class="collection-item avatar z-depth-5">
                 <i class="material-icons medium left amber-text text-darken-4">book</i>
-                <h6 style="text-transform: capitalize">  <b>{{ book }}</b></h6>
+                <a href="/books/{{ book.isbn_no }}"> <h6 style="text-transform: capitalize; color: black">  <b>{{ book.name }}</b></h6></a>
             </li>
         {% endfor %}
 

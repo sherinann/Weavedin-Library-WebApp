@@ -22,20 +22,26 @@ def authors(request):
 def author_description(request,id):
     template = loader.get_template('author_desc.html')
     info=author_info.objects.filter(id=id)
-    print(info)
+   # print(info)
     for item in info:
-        info_book=book.objects.filter(author=item.name)
-        print(info_book)
+        info_book=book.objects.all().filter(author=item.name)
         return HttpResponse(template.render({'info':info,'info_book':info_book}))
 
 #details of book
 def book_description(request,isbn_no):
     template = loader.get_template('book_desc.html')
-    info=book.objects.filter(isbn_no=isbn_no)
-    return HttpResponse(template.render({'info':info}))
+    info=book.objects.filter(isbn_no=isbn_no).values('name','author','description')
+    print(info)
+    for item in info:
+        print(item)
+        print(item['author'])
+        info_author=author_info.objects.filter(name=item['author']).values('name','id')
+        print('hey', info_author)
+        return HttpResponse(template.render({'info':info,'info_author':info_author}))
 
 #to add a new book into database
 def addBook(request):
+    print('in')
     if request.method=="POST":
         name=request.POST['bname']
         author=request.POST['author']
@@ -50,6 +56,7 @@ def addBook(request):
 
 #to add a new author into database
 def addAuthor(request):
+    print('in')
     if request.method=="POST":
         name=request.POST['aname']
         age=request.POST['age']
