@@ -1,10 +1,12 @@
 # Weavedin-Library-WebApp
-A web application for a library system
+A web application for a library system using django and materialize css
 
-### frameworks used
+### frameworks used:
 * django
 * Materialize css
 
+### database used:
+*mysql
 
 ### to run:
 1. clone the repository
