@@ -29,8 +29,9 @@ A web application for a library system using django and materialize css
    
 5. make migrations and migrate
 
-      `python manage.py makemigrations
-       python manage.py migrate`
+      `python manage.py makemigrations`
+      
+      ` python manage.py migrate`
   
 6. run the server
 
