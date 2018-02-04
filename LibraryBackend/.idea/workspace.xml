@@ -53,8 +53,8 @@
       <file leaf-file-name="books_all.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/libraryApp/templates/books_all.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="38" column="82" lean-forward="true" selection-start-line="38" selection-start-column="82" selection-end-line="38" selection-end-column="82" />
+            <state relative-caret-position="360">
+              <caret line="51" column="14" lean-forward="true" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
@@ -897,8 +897,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/libraryApp/templates/books_all.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="38" column="82" lean-forward="true" selection-start-line="38" selection-start-column="82" selection-end-line="38" selection-end-column="82" />
+        <state relative-caret-position="360">
+          <caret line="51" column="14" lean-forward="true" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#0;n#!!top" expanded="true" />
