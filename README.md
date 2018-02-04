@@ -6,7 +6,7 @@ A web application for a library system using django and materialize css
 * Materialize css
 
 ### database used:
-*mysql
+* mysql
 
 ### to run:
 1. clone the repository
@@ -22,11 +22,14 @@ A web application for a library system using django and materialize css
 
 4. create superuser
    `python manage.py createsuperuser`
+   
 5. make migrations and migrate
   `python manage.py makemigrations
   python manage.py migrate`
+  
 6. run the server
   `python manage.py runserver`
+  
 7. go to: http://127.0.0.1:8000
   
 
