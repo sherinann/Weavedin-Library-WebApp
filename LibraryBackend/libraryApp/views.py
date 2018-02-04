@@ -10,8 +10,9 @@ from django.shortcuts import redirect
 #gives all data about books
 def books(request):
     info=book.objects.all()
-    author_info1=author_info.objects.all()
-    return render(request,'books_all.html',{'info':info,'ainfo':author_info1})
+    info_author=author_info.objects.all().values('name')
+    print(info_author)
+    return render(request,'books_all.html',{'info':info,'ainfo':info_author})
 
 #gives data from the author_info model
 def authors(request):
@@ -44,7 +45,8 @@ def addBook(request):
     print('in')
     if request.method=="POST":
         name=request.POST['bname']
-        author=request.POST['author']
+        author=request.POST.get('author_name')
+        print(author)
         isbn_no = request.POST['isbnNo']
         description = request.POST['textarea1']
         if book.objects.filter(isbn_no=isbn_no).exists():
@@ -56,7 +58,6 @@ def addBook(request):
 
 #to add a new author into database
 def addAuthor(request):
-    print('in')
     if request.method=="POST":
         name=request.POST['aname']
         age=request.POST['age']

@@ -36,7 +36,7 @@
             <form class="col s12" method="post"  action="{% url 'addBook' %}">
                 {% csrf_token %}
                 <input placeholder="name of book" id="bname" type="text" name="bname" class="validate " >
-                <input placeholder="Author" id="author" type="text" name="author" class="validate">
+                <input placeholder="Author" id="author" type="text" name="author_name" class="validate">
                 <input placeholder="ISBN NO" id="isbnNo" type="text" name="isbnNo" class="validate">
                 <textarea id="textarea1" name="textarea1" class="materialize-textarea" placeholder="Description"></textarea>
                 <div class="modal-footer">
