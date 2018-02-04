@@ -2,7 +2,6 @@
 A web application for a library system
 
 ### frameworks used
-----------------
 * django
 * Materialize css
 
