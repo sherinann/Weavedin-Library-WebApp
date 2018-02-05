@@ -1,6 +1,11 @@
 # Weavedin-Library-WebApp
 A web application for a library system using django and materialize css
 
+
+
+[Find the hosted sample.](sherin.pythonanywhere.com)
+
+
 ### frameworks used:
 * django
 * Materialize css
@@ -19,7 +24,7 @@ A web application for a library system using django and materialize css
 
  * sql client
   
-       `pip install mysqlclient`
+       `pip install mysqlclient `
   
 3. add database credentials to `settings.py`
 
